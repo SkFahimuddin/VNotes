@@ -1,0 +1,111 @@
+.friend-notes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.friend-notes-header {
+    margin-bottom: 2rem;
+}
+
+.friend-notes-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.friend-notes-header p {
+    color: #666;
+    margin: 0;
+}
+
+.btn-back {
+    background: #6b7280;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-back:hover {
+    background: #4b5563;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.friend-note-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    border-left: 4px solid #667eea;
+}
+
+.friend-note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.note-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.note-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.note-content {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.note-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.note-author {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.empty-state h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}

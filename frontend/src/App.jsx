@@ -7,6 +7,8 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import CreateNote from './pages/CreateNote';
 import EditNote from './pages/EditNote';
+import Friends from './pages/Friends';
+import FriendNotes from './pages/FriendNotes';
 
 function App() {
     return (
@@ -30,7 +32,17 @@ function App() {
                     <Route path="/edit/:id" element={
                         <PrivateRoute>
                             <EditNote />
-                            </PrivateRoute>
+                        </PrivateRoute>
+                    } />
+                    <Route path="/friends" element={
+                        <PrivateRoute>
+                            <Friends />
+                        </PrivateRoute>
+                    } />
+                    <Route path="/friends/:friendId/notes" element={
+                        <PrivateRoute>
+                            <FriendNotes />
+                        </PrivateRoute>
                     } />
                 </Routes>
             </Router>
