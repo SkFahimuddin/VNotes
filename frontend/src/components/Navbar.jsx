@@ -1,3 +1,4 @@
+// frontend/src/components/Navbar.jsx
 import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
@@ -23,12 +24,14 @@ const Navbar = () => {
                         <>
                             <Link to="/dashboard" className="navbar-link">Dashboard</Link>
                             <Link to="/friends" className="navbar-link">Friends</Link>
+                            <Link to="/question-papers" className="navbar-link">Question Papers</Link>
                             <Link to="/create" className="navbar-link">New Note</Link>
                             <span className="navbar-user">👤 {user.name}</span>
                             <button onClick={handleLogout} className="navbar-btn">Logout</button>
                         </>
                     ) : (
                         <>
+                            <Link to="/question-papers" className="navbar-link">Question Papers</Link>
                             <Link to="/login" className="navbar-link">Login</Link>
                             <Link to="/register" className="navbar-btn">Register</Link>
                         </>
